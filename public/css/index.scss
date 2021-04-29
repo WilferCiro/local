@@ -1,0 +1,439 @@
+@import "variables";
+@import "pages/empresa_profile.scss";
+
+
+body, html{
+	margin: 0px;
+	padding: 0px;
+	background: $color-background;
+	font-family: $font-stack;
+	font-size: 13px;
+	scroll-behavior: smooth;
+}
+
+h1 {
+	font-size: $font-h1 !important;
+	font-weight: bold;
+	font-family: $font-stack;
+}
+
+h2 {
+	font-size: $font-h2 !important;
+	font-family: $font-stack;
+}
+
+h3 {
+	font-size: $font-h3 !important;
+	font-family: $font-stack;
+}
+
+h4 {
+	font-size: $font-h4 !important;
+	font-family: $font-stack;
+}
+
+h5 {
+	font-size: $font-h5 !important;
+	font-family: $font-stack;
+}
+
+p {
+	font-size: $font-p !important;
+	font-family: $font-stack;
+}
+
+/** HEADER **/
+header{
+	width: 100%;
+}
+.header-top{
+	width: 60%;
+	padding: 10px 20%;
+	height: 40px;
+	background: $color-primary;
+	display: grid;
+	grid-template-columns: 20% 50% 15% 15%;
+}
+.header-bottom{
+	background: $color-primary-hard;
+	padding: 10px 0px;
+	color: $color-primary;
+}
+.header-item{
+	display: grid;
+	grid-template-columns: 50px calc(100% - 50px);
+	height: 40px;
+	color: white;
+	font-size: $font-h3;
+}
+.logo-container{
+	width: 50%;
+}
+.search-input{
+	width: calc(100% - 40px);
+	margin: auto;
+	padding: 10px 20px;
+	border-radius: 3px;
+	border: solid 1px white;
+	background: white;
+	outline: none;
+}
+.search-container{
+	display: grid;
+	grid-template-columns: calc(100% - 40px) 40px;
+}
+.search-button {
+	width: 40px;
+	margin-left: -2px;
+	border-radius: 0px;
+	height: 100%;
+	border: none;
+	cursor: pointer;
+	background: $color-primary-hard;
+}
+.header-user-container{
+	width: 100%;
+	border: solid 1px black;
+}
+/** HEADER **/
+
+/** INDEX **/
+.page-center{
+	width: 80%;
+	margin: auto;
+}
+
+.banner_mosaico{
+	width: 100%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 65% calc(35% - 20px);
+}
+.banner_mosaico_secundario{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-rows: calc(50% - 10px) calc(50% - 10px);
+}
+
+.triptico_info{
+	display: grid;
+	grid-gap: 2%;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+	margin-top: 20px;
+}
+
+.triptico_info_item{
+	background: white;
+	width: 85%;
+	border-radius: 5px;
+	margin: auto;
+	padding: 10px 20px;
+	display: grid;
+	grid-template-columns: 20% 75%;
+	grid-column-gap: 5%;
+	height: calc(100% - 20px);
+}
+
+.index_productos{
+	background: white;
+	width: calc(100% - 40px);
+	padding: 5px 20px;
+	margin-top: 20px;
+}
+/** INDEX **/
+
+.center-vertical{
+	display: flex;
+	align-items: center;
+}
+
+/*** GRID PRODUCTS ***/
+.grid-products{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	width: 100%;
+}
+.product{
+	background: white;
+	width: calc(100% - 50px);
+	margin: auto;
+	padding: 15px 20px;
+	border: solid 1px $color-boder;
+	border-radius: 8px;
+	min-height: 260px;
+	height: auto;
+	position: relative;
+	font-size: $font-p-min - 1px;
+	.product-image{
+		width: 80%;
+		display: block;
+		margin: auto;
+		margin-bottom: 8px;
+		object-fit: cover;
+		.imagen2{
+			transition: all 0.5s;
+			display: none;
+		}
+		.imagen1{
+			transition: all 0.5s;
+			display: block;
+		}
+	}
+}
+.product-btn-properties{
+	top: 8px;
+	right: 8px;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 3;
+	outline: none;
+	&:hover, &:focus{
+		background: $color-highligth;
+		~.product-properties{
+			width: calc(100% - 16px);
+			height: calc(100% - 16px);
+			border-radius: 8px;
+		}
+	}
+}
+.product-properties{
+	transition: all 0.3s;
+	width: 0%;
+	height: 0%;
+	position: absolute;
+	background: $color-primary;
+	top: 8px;
+	right: 8px;
+	border-radius: 0px 0px 0px 100%;
+	z-index: 2;
+	overflow: hidden;
+	&:hover{
+		width: calc(100% - 16px);
+		height: calc(100% - 16px);
+		border-radius: 8px;
+	}
+}
+
+.product-seller{
+	text-align: center;
+	margin-bottom: 8px;
+}
+.product-footer{
+	display: grid;
+	grid-template-columns: 48% 48%;
+	grid-column-gap: 4%;
+	margin-top: 20px;
+}
+.precio{
+	.precio-actual{
+		font-weight: bold;
+		font-size: $font-h5;
+		display: block;
+	}
+	.precio-original{
+		text-decoration: line-through;
+		font-style: italic;
+		color: gray;
+	}
+}
+/*** GRID PRODUCTS ***/
+
+button{
+	background: $color-primary;
+	border-radius: 3px;
+	border: solid 1px $color-primary;
+	padding: 5px 10px;
+	color: white;
+	cursor: pointer;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+/** FOOTER **/
+footer{
+	background: $color-primary-hard;
+	padding: 30px 0px;
+	width: 100%;
+	margin-top: 30px;
+	color: $color-primary;
+}
+.footer-divisor{
+	width: 70%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 4fr 3fr;
+}
+/** FOOTER **/
+
+/** NPROGRESS **/
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: $color-highligth;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px $color-highligth, 0 0 5px $color-highligth;
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 5px;
+  right: 50%;
+  background: white;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  padding: 10px 10px;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#nprogress .spinner-icon {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+
+  border: solid 3px transparent;
+  border-top-color: $color-highligth;
+  border-left-color: $color-highligth;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/** NPROGRESS **/
+
+// KiwiModal.js
+
+.modal-background{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+	display: none;
+}
+.modal{
+	z-index: 1001;
+	background: white;
+	position: fixed;
+	border-radius: 4px;
+	display: none;
+	transition: all 2s;
+	top: 5%;
+}
+.open{
+	display: block;
+}
+.modal-1{
+	left: 38%;
+	top: 5%;
+	width: 24%;
+}
+.modal-2{
+	left: 30%;
+	top: 5%;
+	width: 40%;
+}
+.modal-3{
+	left: 15%;
+	top: 5%;
+	width: 70%;
+}
+.modal-header{
+	display: grid;
+	grid-template-columns: calc(100% - 30px) 30px;
+	border-bottom: 2px solid $color-boder;
+	width: calc(95% - 20px);
+	margin: auto;
+	margin-bottom: 20px;
+	font-size: $font-h3;
+	padding: 15px 10px;
+}
+.modal-body{
+	overflow: auto;
+	width: calc(95% - 20px);
+	padding: 15px 15px;
+	height: fit-content;
+	min-height: 300px;
+}
+.modal-footer{
+
+}
+// KiwiModal.js
+
+// index.js
+.list-empresa-icon{
+	display: flex;
+}
+.empresa-icon{
+	width: 100px;
+	margin-left: 10px;
+	text-align: center;
+	.empresa-icon-img{
+		width: 100px;
+		border-radius: 100%;
+		overflow: hidden;
+	}
+}
+// index.js

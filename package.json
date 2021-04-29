@@ -1,0 +1,35 @@
+{
+  "name": "davinci_blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.2",
+    "@zeit/next-css": "^1.0.1",
+    "add": "^2.0.6",
+    "format-unicorn": "^1.1.1",
+    "isomorphic-unfetch": "^3.1.0",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "next": "10.0.4",
+    "next-pwa": "^5.0.1",
+    "nprogress": "^0.2.0",
+    "react": "17.0.1",
+    "react-calendar": "^3.3.1",
+    "react-dom": "17.0.1",
+    "react-multi-carousel": "^2.6.2",
+    "react-responsive-carousel": "^3.2.18",
+    "react-syntax-highlighter": "^15.4.3",
+    "sqlite": "^4.0.19",
+    "sqlite3": "^5.0.0",
+    "suneditor-react": "^2.15.0",
+    "url-loader": "^4.1.1",
+    "yarn": "^1.22.10"
+  }
+}

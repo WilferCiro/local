@@ -1,0 +1,43 @@
+@import "variables";
+
+
+@media (max-width: 767px) {
+	.page-center{
+		width: calc(100%);
+		padding: 0px;
+	}
+
+	.banner_mosaico{
+		width: 100%;
+		display: block;
+	}
+
+	.banner_mosaico_secundario{
+		grid-gap: 10px;
+		margin-top: 8px;
+	}
+
+	.triptico_info{
+		display: block;
+	}
+	.triptico_info_item{
+		margin-top: 8px;
+	}
+	.grid-products{
+		display: block;
+	}
+	.product{
+		margin-top: 8px;
+	}
+
+	.header-top{
+		display: grid;
+		grid-template-columns: 20% 0% 40% 40%;
+	}
+	.search-container{
+		display: none;
+	}
+
+
+
+}
