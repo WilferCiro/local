@@ -207,7 +207,7 @@ Home.getInitialProps = async ({query}) => {
 			method: 'GET',
 			body: {
 				"modelo" : "datos_basicos",
-				"cantidad" : 4,
+				"cantidad" : 12,
 				"ordenar_por": "-fecha_creacion"
 			}
 		}),
