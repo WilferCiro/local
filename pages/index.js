@@ -182,6 +182,12 @@ class Home extends BasePanel{
 
 				<h5>Suscríbete</h5>
 
+				<section>
+					<input />
+					<input type="checkbox"></input> Acepto términos
+					<button>Suscribirse</button>
+				</section>
+
 			</div>
 		);
 	}
@@ -208,6 +214,7 @@ Home.getInitialProps = async ({query}) => {
 			body: {
 				"modelo" : "datos_basicos",
 				"cantidad" : 12,
+				"pagina" : 1,
 				"ordenar_por": "-fecha_creacion"
 			}
 		}),

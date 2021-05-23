@@ -4,6 +4,7 @@ import BasePanel      from '@/containers/BasePanel';
 import Constant       from '@/components//Constant';
 import Image          from 'next/image';
 import KiwiModal      from '@/components/KiwiModal';
+import FormInputText  from '@/formcomponents/FormInputText';
 
 class UserHeaderMenu extends BasePanel{
 	constructor(props) {
@@ -34,8 +35,14 @@ class UserHeaderMenu extends BasePanel{
 				</div>
 
 				<KiwiModal title="Iniciar sesión" ref={this.refModal}>
-					<input placeholder="Email" /><br />
-					<input placeholder="Contraseña" /><br />
+					<FormInputText
+						placeholder="Correo electrónico"
+						label="Correo electrónico"
+						/><br />
+					<FormInputText
+						placeholder="Contraseña"
+						label="Contraseña"
+						/><br />
 					¿Olvidaste tu contraseña?<br />
 					<button>Iniciar sesión</button><br />
 					ó<br />

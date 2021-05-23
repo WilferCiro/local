@@ -8,6 +8,9 @@
       "@/containers/*": [
         "containers/*"
       ],
+      "@/formcomponents/*": [
+        "formcomponents/*"
+      ],
       "@/utils/*": [
         "utils/*"
       ]

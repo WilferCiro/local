@@ -70,8 +70,8 @@ class Services {
 			let decoder = new TextDecoder("UTF-8");//new TextDecoder("iso-8859-1");
 			let data ={};
 			try {
-				data = buffer.json();///JSON.parse(decoder.decode(buffer));
-				data["estado_p"] = data.status;
+				data = await buffer.json();///JSON.parse(decoder.decode(buffer));
+				data["estado_p"] = buffer.status;
 				if(data.status!==200) {
 					let message ="";
 					if(data.data !== undefined && data.data !== null) {
