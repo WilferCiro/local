@@ -5,12 +5,15 @@ import Constant       from '@/components//Constant';
 import Image          from 'next/image';
 import KiwiModal      from '@/components/KiwiModal';
 import FormInputText  from '@/formcomponents/FormInputText';
+import FormPassword    from '@/formcomponents//FormPassword';
 
 class UserHeaderMenu extends BasePanel{
 	constructor(props) {
 		super(props);
 
 		this.refModal = React.createRef();
+		this.refEmail = React.createRef();
+		this.refPassword = React.createRef();
 	}
 	componentDidMount() {
 	}
@@ -38,17 +41,22 @@ class UserHeaderMenu extends BasePanel{
 					<FormInputText
 						placeholder="Correo electrónico"
 						label="Correo electrónico"
+						id="login_email"
+						ref={this.refEmail}
 						/><br />
-					<FormInputText
+					<FormPassword
 						placeholder="Contraseña"
 						label="Contraseña"
+						id="login_pasword"
+						ref={this.refPassword}
 						/><br />
-					¿Olvidaste tu contraseña?<br />
-					<button>Iniciar sesión</button><br />
+					<a onClick={(e) => this.redirectPage(this.constants.route_recover, this.constants.route_recover_alias)}>¿Olvidaste tu contraseña?</a><br />
+					<button>Iniciar sesión</button>
+					<br />
 					ó<br />
 					<button>Ingresar con facebook</button><br />
 					<button>Ingresar con gmail</button><br />
-					Regístrate
+					<a onClick={(e) => this.redirectPage(this.constants.route_register, this.constants.route_register_alias)}>Regístrate</a>
 				</KiwiModal>
 			</div>
 		);

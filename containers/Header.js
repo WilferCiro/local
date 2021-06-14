@@ -32,18 +32,7 @@ class Header extends BasePanel{
 						<UserHeaderMenu />
 					</div>
 					<div className="header-item">
-						<div className="header-item-img">
-							<Image
-								src={this.constants.img_promotions_white}
-								alt={"Caja"}
-								width={40}
-								height={40}
-								layout={"fixed"}
-								/>
-						</div>
-						<div className="header-item-text">
-							Promos
-						</div>
+						Quimbaya Quindío
 					</div>
 				</div>
 				<div className="header-bottom">

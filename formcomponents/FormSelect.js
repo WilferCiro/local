@@ -2,31 +2,30 @@ import React              from 'react';
 import BasePanel          from '@/containers/BasePanel';
 import BaseFormComponent  from '@/formcomponents/BaseFormComponent';
 
-class FormInputText extends BaseFormComponent{
+class FormSelect extends BaseFormComponent{
 	constructor(props) {
 		super(props);
 
-		this.type = "FormInputText";
+		this.type = "FormSelect";
 	}
 
 	render() {
 		return (
 			<div className="">
-				<input
+				<select
 					ref={this.input}
 					className="form-text"
-					placeholder={this.props.placeholder}
-					type="text"
 					defaultValue={this.props.defaultValue}
-					/><br />
+				>
 				{
-					(this.state.errores).map((item, index) => {
-						return <label key={Math.random()}>{item}</label>
+					(this.state.options).map((option, index) => {
+						return <option key={Math.random()} value={option.value}>{option.label}</option>
 					})
 				}
+				</select>
 			</div>
 		);
 	}
 }
 
-export default FormInputText;
+export default FormSelect;

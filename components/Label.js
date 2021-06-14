@@ -1,7 +1,6 @@
 import React          from 'react';
 import BasePanel      from '@/containers/BasePanel';
 import Constant       from '@/components//Constant';
-import Icon from '@material-ui/core/Icon';
 
 class Label extends BasePanel{
 	constructor(props) {
@@ -21,14 +20,10 @@ class Label extends BasePanel{
 	}
 
 	render() {
+		let icon = this.props.icon;
 		return (
 			<React.Fragment>
-				{
-					(this.props.icon !== null && this.props.icon !== undefined) ?
-					<Icon>add_circle</Icon>
-					:
-					null
-				}
+				{icon}
 				{
 					(this.state.texto === null && this.props.showLoading) ?
 						<label className="loading-text">Cargando...</label>

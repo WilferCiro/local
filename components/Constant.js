@@ -26,19 +26,23 @@ class Constant{
 		this.noLoggedPages = [];
 
 		/// Routes
-
 		this.route_index               ='/';
 		this.route_index_alias         ='/';
 
-		this.route_search = '/search/[search]';
-		this.route_search_alias = '/search/{0}';
+		this.route_search              = '/search/[search]';
+		this.route_search_alias        = '/search/{0}';
 
-		this.empresa_profile = '/empresa/[id]/[name]';
-		this.empresa_profile_alias = '/empresa/{0}/{1}';
+		this.empresa_profile           = '/empresa/[id]/[name]';
+		this.empresa_profile_alias     = '/empresa/{0}/{1}';
+
+		this.route_recover             = '/recover';
+		this.route_recover_alias       = '/recover';
+
+		this.route_register            = '/signin';
+		this.route_register_alias      = '/signin';
 
 		/*** IMÁGENES ***/
 		this.img_logo                       = "/images/general/logo.svg";
-
 		this.img_lupa_white                 = "/images/icons/lupa-white.svg";
 		this.img_box_black                  = "/images/icons/box-black.svg";
 		this.img_shop_black                 = "/images/icons/shop-black.svg";

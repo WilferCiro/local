@@ -2,11 +2,19 @@ import React              from 'react';
 import BasePanel          from '@/containers/BasePanel';
 import BaseFormComponent  from '@/formcomponents/BaseFormComponent';
 
-class FormInputText extends BaseFormComponent{
+class FormCheckBox extends BaseFormComponent{
 	constructor(props) {
 		super(props);
 
-		this.type = "FormInputText";
+		this.type = "FormCheckBox";
+	}
+
+	getValue() {
+		return this.input.current.checked;
+	}
+
+	setValue(value) {
+		this.input.current.checked = value;
 	}
 
 	render() {
@@ -16,9 +24,11 @@ class FormInputText extends BaseFormComponent{
 					ref={this.input}
 					className="form-text"
 					placeholder={this.props.placeholder}
-					type="text"
-					defaultValue={this.props.defaultValue}
-					/><br />
+					type="checkbox"
+					id={this.getID()}
+					defaultChecked={this.props.defaultValue}
+				/>
+				<label htmlFor={this.getID()}>{this.getLabel()}</label><br />
 				{
 					(this.state.errores).map((item, index) => {
 						return <label key={Math.random()}>{item}</label>
@@ -29,4 +39,4 @@ class FormInputText extends BaseFormComponent{
 	}
 }
 
-export default FormInputText;
+export default FormCheckBox;

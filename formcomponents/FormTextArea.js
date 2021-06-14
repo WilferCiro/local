@@ -2,31 +2,26 @@ import React              from 'react';
 import BasePanel          from '@/containers/BasePanel';
 import BaseFormComponent  from '@/formcomponents/BaseFormComponent';
 
-class FormInputText extends BaseFormComponent{
+class FormtextArea extends BaseFormComponent{
 	constructor(props) {
 		super(props);
 
-		this.type = "FormInputText";
+		this.type = "FormtextArea";
 	}
 
 	render() {
 		return (
-			<div className="">
-				<input
+			<div class="form-input-container">
+				<textarea
 					ref={this.input}
-					className="form-text"
+					className="form-textarea"
 					placeholder={this.props.placeholder}
-					type="text"
 					defaultValue={this.props.defaultValue}
-					/><br />
-				{
-					(this.state.errores).map((item, index) => {
-						return <label key={Math.random()}>{item}</label>
-					})
-				}
+				>
+				</textarea>
 			</div>
 		);
 	}
 }
 
-export default FormInputText;
+export default FormtextArea;

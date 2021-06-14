@@ -2,6 +2,7 @@ import React          from 'react';
 import BasePanel      from '@/containers/BasePanel';
 import Constant       from '@/components//Constant';
 import Image from 'next/image'
+import {BsSearch} from 'react-icons/bs';
 
 class KiwiSearch extends BasePanel{
 	constructor(props) {
@@ -20,13 +21,7 @@ class KiwiSearch extends BasePanel{
 			<div className="search-container">
 				<input type="text" name="search" placeholder="Buscar en la página" className="search-input" />
 				<button className="search-button" onClick={(e) => this.search()}>
-					<Image
-						src={this.constants.img_lupa_white}
-						alt={"Lupa"}
-						width={20}
-						height={20}
-						layout={"fixed"}
-						/>
+					<BsSearch />
 				</button>
 			</div>
 		);

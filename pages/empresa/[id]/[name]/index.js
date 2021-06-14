@@ -4,6 +4,9 @@ import Constant       from '@/components//Constant';
 import Image from 'next/image'
 import GridProducts   from '@/containers//GridProducts';
 import Label          from '@/components//Label';
+import {AiFillFacebook} from 'react-icons/ai';
+
+
 class EmpresaProfile extends BasePanel{
 	constructor(props) {
 		super(props);
@@ -41,7 +44,7 @@ class EmpresaProfile extends BasePanel{
 							<Label
 								texto={"www.facebook.com"}
 								url={"www.facebook.com"}
-								icon={"star"}
+								icon={<AiFillFacebook />}
 								/>
 
 							www.instagram.com<br />
